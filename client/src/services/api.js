@@ -7,8 +7,17 @@ import axios from 'axios';
  * and standard Bearer token interceptor architecture.
  */
 
-const API_BASE_URL =
-    import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api/v1';
+const getApiBaseUrl = () => {
+    if (import.meta.env.VITE_API_BASE_URL) {
+        return import.meta.env.VITE_API_BASE_URL;
+    }
+    if (typeof window !== 'undefined' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+        return 'https://blood-ai.onrender.com/api/v1';
+    }
+    return 'http://localhost:5000/api/v1';
+};
+
+const API_BASE_URL = getApiBaseUrl();
 
 export const apiClient = axios.create({
     baseURL: API_BASE_URL,
@@ -65,7 +74,7 @@ apiClient.interceptors.response.use(
             return Promise.reject({
                 status: 0,
                 code: 'NETWORK_ERROR',
-                message: 'Unable to connect to BLOOD AI backend. Please verify server is running on port 5000.'
+                message: 'Unable to connect to BLOOD AI backend. Please verify the backend service is running.'
             });
         }
 
