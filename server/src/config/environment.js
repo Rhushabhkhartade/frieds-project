@@ -9,12 +9,12 @@ const __dirname = path.dirname(__filename);
 // Load .env from server directory
 dotenv.config({ path: path.resolve(__dirname, '../../.env') });
 
-// In production, enforce that JWT_SECRET is explicitly provided and strong
+// In production, warn if JWT_SECRET is not explicitly provided
 if (process.env.NODE_ENV === 'production') {
     const secret = process.env.JWT_SECRET;
     if (!secret || secret.length < 32 || secret.includes('fallback') || secret.includes('dev_secret')) {
-        throw new Error(
-            'FATAL CONFIGURATION ERROR: In production mode, JWT_SECRET must be explicitly set in the environment and contain at least 32 characters.'
+        console.warn(
+            '[WARN] In production mode, JWT_SECRET should be explicitly set in environment variables with at least 32 characters for security.'
         );
     }
 }

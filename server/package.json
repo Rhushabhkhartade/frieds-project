@@ -5,6 +5,7 @@
     "main": "src/index.js",
     "type": "module",
     "scripts": {
+        "build": "echo \"No build step required for server backend\"",
         "start": "node src/index.js",
         "dev": "nodemon --watch src src/index.js",
         "test:auth": "node test_auth_suite.mjs",
