@@ -27,8 +27,12 @@ app.use(helmet({
 }));
 
 // CORS configuration
+const allowedOrigins = env.CORS_ORIGIN === '*'
+    ? true
+    : env.CORS_ORIGIN.split(',').map(origin => origin.trim());
+
 app.use(cors({
-    origin: env.CORS_ORIGIN,
+    origin: allowedOrigins,
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization']
@@ -46,9 +50,9 @@ app.use(express.urlencoded({ extended: true, limit: '1mb' }));
 // Health Check Endpoint (Root Level)
 app.get('/health', (req, res) => {
     res.status(200).json({
-        success: true,
-        service: 'BLOOD AI API',
         status: 'healthy',
+        service: 'BLOOD AI API',
+        success: true,
         environment: env.NODE_ENV,
         version: '1.0.0',
         timestamp: new Date().toISOString()
@@ -61,9 +65,9 @@ const apiV1Router = express.Router();
 // Health Check Endpoint (under /api/v1/health)
 apiV1Router.get('/health', (req, res) => {
     res.status(200).json({
-        success: true,
+        status: 'ok',
         service: 'BLOOD AI API v1',
-        status: 'healthy',
+        success: true,
         timestamp: new Date().toISOString()
     });
 });
@@ -102,10 +106,11 @@ app.use(errorHandler);
 
 // Start server if executed directly
 const PORT = env.PORT;
-const server = app.listen(PORT, () => {
-    logger.info(`BLOOD AI Backend running on port ${PORT} [${env.NODE_ENV}]`);
-    logger.info(`Health check available at http://localhost:${PORT}/health`);
-    logger.info(`API v1 mounted at http://localhost:${PORT}/api/v1`);
+const HOST = env.HOST || '0.0.0.0';
+const server = app.listen(PORT, HOST, () => {
+    logger.info(`BLOOD AI Backend running on port ${PORT} [${env.NODE_ENV}] binding to ${HOST}`);
+    logger.info(`Health check available at http://${HOST === '0.0.0.0' ? 'localhost' : HOST}:${PORT}/health`);
+    logger.info(`API v1 mounted at http://${HOST === '0.0.0.0' ? 'localhost' : HOST}:${PORT}/api/v1`);
     alertService.refreshAlerts().catch(err => {
         logger.error(`Initial inventory alert refresh failed: ${err.message}`);
     });
