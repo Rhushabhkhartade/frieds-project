@@ -1,0 +1,530 @@
+[
+  {
+    "id": "rec_001",
+    "bloodGroup": "O-",
+    "type": "DONATION_DRIVE_RECOMMENDED",
+    "priority": "URGENT",
+    "title": "Immediate O- Blood Donor Outreach",
+    "description": "Current stock is 3 units (Critical threshold: 5). Projected 7-day demand is 8 units.",
+    "actionableSteps": [
+      "Broadcast notification to registered O- universal donors",
+      "Request temporary buffer transfer from Regional Blood Center"
+    ],
+    "status": "PENDING",
+    "createdAt": "2026-09-30T19:00:00.000Z"
+  },
+  {
+    "id": "rec_002",
+    "bloodGroup": "O-",
+    "type": "FIFO_DISPATCH_ALERT",
+    "priority": "HIGH",
+    "title": "Prioritize Dispatch for Expiring Unit BLD-2026-1003",
+    "description": "Whole blood unit expires in 2 days. Assign to upcoming elective surgery schedule to prevent wastage.",
+    "actionableSteps": [
+      "Reserve unit for scheduled orthopedic transfusion",
+      "Tag unit as Priority 1 on storage shelf RACK-A2"
+    ],
+    "status": "PENDING",
+    "createdAt": "2026-09-30T20:00:00.000Z"
+  },
+  {
+    "dedupeKey": "REPLENISH_STOCK:A+",
+    "source": "DETERMINISTIC_ENGINE",
+    "type": "REPLENISH_STOCK",
+    "priority": "CRITICAL",
+    "title": "Address critical A+ stock",
+    "message": "A+ has 1 available unit(s) and 1 reserved; the configured critical threshold is 8.",
+    "reason": "Available stock is 7 below the critical threshold of 8. Forecasting was insufficient for PRBC; this recommendation is based on configured stock thresholds, not predicted demand.",
+    "suggestedAction": "Review collection and authorized inter-facility transfer options for A+; account for the 1 reserved unit(s) before committing stock.",
+    "bloodGroup": "A+",
+    "component": null,
+    "referenceType": "BLOOD_GROUP",
+    "referenceId": "A+",
+    "status": "ACTIVE",
+    "confidence": "HIGH",
+    "metadata": {
+      "availableUnits": 1,
+      "reservedUnits": 1,
+      "threshold": 8,
+      "thresholdKind": "critical",
+      "availableByComponent": {
+        "PRBC": 1
+      },
+      "reservedByComponent": {
+        "PRBC": 1
+      },
+      "matchingAlertIds": [
+        "alt_crit_a_1790789098906"
+      ],
+      "forecastStates": [
+        {
+          "component": "PRBC",
+          "state": "INSUFFICIENT_DATA"
+        }
+      ],
+      "priorityBasis": [
+        "Available stock is below the configured critical threshold.",
+        "A matching active inventory alert independently confirms the condition."
+      ],
+      "conditionActive": true
+    },
+    "createdAt": "2026-09-30T17:51:41.971Z",
+    "updatedAt": "2026-09-30T18:00:34.815Z",
+    "id": "rec_de8e1c1d-b3a4-4b7a-be93-20159acf4c29"
+  },
+  {
+    "dedupeKey": "REPLENISH_STOCK:A-",
+    "source": "DETERMINISTIC_ENGINE",
+    "type": "REPLENISH_STOCK",
+    "priority": "CRITICAL",
+    "title": "Address critical A- stock",
+    "message": "A- has 1 available unit(s) and 0 reserved; the configured critical threshold is 4.",
+    "reason": "Available stock is 3 below the critical threshold of 4. Forecasting was insufficient for PRBC; this recommendation is based on configured stock thresholds, not predicted demand.",
+    "suggestedAction": "Review collection and authorized inter-facility transfer options for A-; account for the 0 reserved unit(s) before committing stock.",
+    "bloodGroup": "A-",
+    "component": null,
+    "referenceType": "BLOOD_GROUP",
+    "referenceId": "A-",
+    "status": "ACTIVE",
+    "confidence": "HIGH",
+    "metadata": {
+      "availableUnits": 1,
+      "reservedUnits": 0,
+      "threshold": 4,
+      "thresholdKind": "critical",
+      "availableByComponent": {
+        "PRBC": 1
+      },
+      "reservedByComponent": {
+        "PRBC": 0
+      },
+      "matchingAlertIds": [
+        "alt_crit_a_1790789098906"
+      ],
+      "forecastStates": [
+        {
+          "component": "PRBC",
+          "state": "INSUFFICIENT_DATA"
+        }
+      ],
+      "priorityBasis": [
+        "Available stock is below the configured critical threshold.",
+        "A matching active inventory alert independently confirms the condition."
+      ],
+      "conditionActive": true
+    },
+    "createdAt": "2026-09-30T17:51:41.971Z",
+    "updatedAt": "2026-09-30T18:00:34.815Z",
+    "id": "rec_a8405019-6a09-406f-a5fc-4720c0b79642"
+  },
+  {
+    "dedupeKey": "REPLENISH_STOCK:B+",
+    "source": "DETERMINISTIC_ENGINE",
+    "type": "REPLENISH_STOCK",
+    "priority": "CRITICAL",
+    "title": "Address critical B+ stock",
+    "message": "B+ has 1 available unit(s) and 0 reserved; the configured critical threshold is 8.",
+    "reason": "Available stock is 7 below the critical threshold of 8. Forecasting was insufficient for PLATELETS; this recommendation is based on configured stock thresholds, not predicted demand.",
+    "suggestedAction": "Review collection and authorized inter-facility transfer options for B+; account for the 0 reserved unit(s) before committing stock.",
+    "bloodGroup": "B+",
+    "component": null,
+    "referenceType": "BLOOD_GROUP",
+    "referenceId": "B+",
+    "status": "ACTIVE",
+    "confidence": "HIGH",
+    "metadata": {
+      "availableUnits": 1,
+      "reservedUnits": 0,
+      "threshold": 8,
+      "thresholdKind": "critical",
+      "availableByComponent": {
+        "PLATELETS": 1
+      },
+      "reservedByComponent": {
+        "PLATELETS": 0
+      },
+      "matchingAlertIds": [
+        "alt_crit_b_1790789098906"
+      ],
+      "forecastStates": [
+        {
+          "component": "PLATELETS",
+          "state": "INSUFFICIENT_DATA"
+        }
+      ],
+      "priorityBasis": [
+        "Available stock is below the configured critical threshold.",
+        "A matching active inventory alert independently confirms the condition."
+      ],
+      "conditionActive": true
+    },
+    "createdAt": "2026-09-30T17:51:41.971Z",
+    "updatedAt": "2026-09-30T18:00:34.815Z",
+    "id": "rec_8e3425f3-f376-4354-9509-c7ef0b8d9b1c"
+  },
+  {
+    "dedupeKey": "REPLENISH_STOCK:B-",
+    "source": "DETERMINISTIC_ENGINE",
+    "type": "REPLENISH_STOCK",
+    "priority": "CRITICAL",
+    "title": "Address critical B- stock",
+    "message": "B- has 0 available unit(s) and 0 reserved; the configured critical threshold is 4.",
+    "reason": "Available stock is 4 below the critical threshold of 4. Forecasting was insufficient for PRBC; this recommendation is based on configured stock thresholds, not predicted demand.",
+    "suggestedAction": "Review collection and authorized inter-facility transfer options for B-; account for the 0 reserved unit(s) before committing stock.",
+    "bloodGroup": "B-",
+    "component": null,
+    "referenceType": "BLOOD_GROUP",
+    "referenceId": "B-",
+    "status": "ACTIVE",
+    "confidence": "HIGH",
+    "metadata": {
+      "availableUnits": 0,
+      "reservedUnits": 0,
+      "threshold": 4,
+      "thresholdKind": "critical",
+      "availableByComponent": {
+        "PRBC": 0
+      },
+      "reservedByComponent": {
+        "PRBC": 0
+      },
+      "matchingAlertIds": [
+        "alt_crit_b_1790789098906"
+      ],
+      "forecastStates": [
+        {
+          "component": "PRBC",
+          "state": "INSUFFICIENT_DATA"
+        }
+      ],
+      "priorityBasis": [
+        "Available stock is below the configured critical threshold.",
+        "A matching active inventory alert independently confirms the condition."
+      ],
+      "conditionActive": true
+    },
+    "createdAt": "2026-09-30T17:51:41.971Z",
+    "updatedAt": "2026-09-30T18:00:34.815Z",
+    "id": "rec_cfe7a4d3-6877-4560-9291-28594da895ad"
+  },
+  {
+    "dedupeKey": "REPLENISH_STOCK:AB+",
+    "source": "DETERMINISTIC_ENGINE",
+    "type": "REPLENISH_STOCK",
+    "priority": "CRITICAL",
+    "title": "Address critical AB+ stock",
+    "message": "AB+ has 1 available unit(s) and 0 reserved; the configured critical threshold is 4.",
+    "reason": "Available stock is 3 below the critical threshold of 4. Forecasting was insufficient for PLASMA; this recommendation is based on configured stock thresholds, not predicted demand.",
+    "suggestedAction": "Review collection and authorized inter-facility transfer options for AB+; account for the 0 reserved unit(s) before committing stock.",
+    "bloodGroup": "AB+",
+    "component": null,
+    "referenceType": "BLOOD_GROUP",
+    "referenceId": "AB+",
+    "status": "ACTIVE",
+    "confidence": "HIGH",
+    "metadata": {
+      "availableUnits": 1,
+      "reservedUnits": 0,
+      "threshold": 4,
+      "thresholdKind": "critical",
+      "availableByComponent": {
+        "PLASMA": 1
+      },
+      "reservedByComponent": {
+        "PLASMA": 0
+      },
+      "matchingAlertIds": [
+        "alt_crit_ab_1790789098906"
+      ],
+      "forecastStates": [
+        {
+          "component": "PLASMA",
+          "state": "INSUFFICIENT_DATA"
+        }
+      ],
+      "priorityBasis": [
+        "Available stock is below the configured critical threshold.",
+        "A matching active inventory alert independently confirms the condition."
+      ],
+      "conditionActive": true
+    },
+    "createdAt": "2026-09-30T17:51:41.971Z",
+    "updatedAt": "2026-09-30T18:00:34.815Z",
+    "id": "rec_4f05add7-33c4-4e81-9499-978ff8d224d7"
+  },
+  {
+    "dedupeKey": "REPLENISH_STOCK:AB-",
+    "source": "DETERMINISTIC_ENGINE",
+    "type": "REPLENISH_STOCK",
+    "priority": "CRITICAL",
+    "title": "Address critical AB- stock",
+    "message": "AB- has 1 available unit(s) and 0 reserved; the configured critical threshold is 2.",
+    "reason": "Available stock is 1 below the critical threshold of 2. Forecasting was insufficient for PLATELETS, PLASMA; this recommendation is based on configured stock thresholds, not predicted demand.",
+    "suggestedAction": "Review collection and authorized inter-facility transfer options for AB-; account for the 0 reserved unit(s) before committing stock.",
+    "bloodGroup": "AB-",
+    "component": null,
+    "referenceType": "BLOOD_GROUP",
+    "referenceId": "AB-",
+    "status": "ACTIVE",
+    "confidence": "HIGH",
+    "metadata": {
+      "availableUnits": 1,
+      "reservedUnits": 0,
+      "threshold": 2,
+      "thresholdKind": "critical",
+      "availableByComponent": {
+        "PLATELETS": 0,
+        "PLASMA": 1
+      },
+      "reservedByComponent": {
+        "PLATELETS": 0,
+        "PLASMA": 0
+      },
+      "matchingAlertIds": [
+        "alt_crit_ab_1790789098906"
+      ],
+      "forecastStates": [
+        {
+          "component": "PLATELETS",
+          "state": "INSUFFICIENT_DATA"
+        },
+        {
+          "component": "PLASMA",
+          "state": "INSUFFICIENT_DATA"
+        }
+      ],
+      "priorityBasis": [
+        "Available stock is below the configured critical threshold.",
+        "A matching active inventory alert independently confirms the condition."
+      ],
+      "conditionActive": true
+    },
+    "createdAt": "2026-09-30T17:51:41.971Z",
+    "updatedAt": "2026-09-30T18:00:34.815Z",
+    "id": "rec_7ee39e72-aeb9-4af6-aa4f-3d3fdcacde15"
+  },
+  {
+    "dedupeKey": "REPLENISH_STOCK:O+",
+    "source": "DETERMINISTIC_ENGINE",
+    "type": "REPLENISH_STOCK",
+    "priority": "CRITICAL",
+    "title": "Address critical O+ stock",
+    "message": "O+ has 1 available unit(s) and 0 reserved; the configured critical threshold is 10.",
+    "reason": "Available stock is 9 below the critical threshold of 10. Forecasting was insufficient for PRBC, WHOLE_BLOOD; this recommendation is based on configured stock thresholds, not predicted demand.",
+    "suggestedAction": "Review collection and authorized inter-facility transfer options for O+; account for the 0 reserved unit(s) before committing stock.",
+    "bloodGroup": "O+",
+    "component": null,
+    "referenceType": "BLOOD_GROUP",
+    "referenceId": "O+",
+    "status": "ACTIVE",
+    "confidence": "HIGH",
+    "metadata": {
+      "availableUnits": 1,
+      "reservedUnits": 0,
+      "threshold": 10,
+      "thresholdKind": "critical",
+      "availableByComponent": {
+        "PRBC": 1,
+        "WHOLE_BLOOD": 0
+      },
+      "reservedByComponent": {
+        "PRBC": 0,
+        "WHOLE_BLOOD": 0
+      },
+      "matchingAlertIds": [
+        "alt_crit_o_1790789098906"
+      ],
+      "forecastStates": [
+        {
+          "component": "PRBC",
+          "state": "INSUFFICIENT_DATA"
+        },
+        {
+          "component": "WHOLE_BLOOD",
+          "state": "INSUFFICIENT_DATA"
+        }
+      ],
+      "priorityBasis": [
+        "Available stock is below the configured critical threshold.",
+        "A matching active inventory alert independently confirms the condition."
+      ],
+      "conditionActive": true
+    },
+    "createdAt": "2026-09-30T17:51:41.971Z",
+    "updatedAt": "2026-09-30T18:00:34.815Z",
+    "id": "rec_66bd19ff-15c9-4554-b9b1-f659ec67bb7d"
+  },
+  {
+    "dedupeKey": "REPLENISH_STOCK:O-",
+    "source": "DETERMINISTIC_ENGINE",
+    "type": "REPLENISH_STOCK",
+    "priority": "CRITICAL",
+    "title": "Address critical O- stock",
+    "message": "O- has 3 available unit(s) and 0 reserved; the configured critical threshold is 5.",
+    "reason": "Available stock is 2 below the critical threshold of 5. Forecasting was insufficient for PRBC, WHOLE_BLOOD; this recommendation is based on configured stock thresholds, not predicted demand.",
+    "suggestedAction": "Review collection and authorized inter-facility transfer options for O-; account for the 0 reserved unit(s) before committing stock.",
+    "bloodGroup": "O-",
+    "component": null,
+    "referenceType": "BLOOD_GROUP",
+    "referenceId": "O-",
+    "status": "ACTIVE",
+    "confidence": "HIGH",
+    "metadata": {
+      "availableUnits": 3,
+      "reservedUnits": 0,
+      "threshold": 5,
+      "thresholdKind": "critical",
+      "availableByComponent": {
+        "PRBC": 2,
+        "WHOLE_BLOOD": 1
+      },
+      "reservedByComponent": {
+        "PRBC": 0,
+        "WHOLE_BLOOD": 0
+      },
+      "matchingAlertIds": [
+        "alt_001"
+      ],
+      "forecastStates": [
+        {
+          "component": "PRBC",
+          "state": "INSUFFICIENT_DATA"
+        },
+        {
+          "component": "WHOLE_BLOOD",
+          "state": "INSUFFICIENT_DATA"
+        }
+      ],
+      "priorityBasis": [
+        "Available stock is below the configured critical threshold.",
+        "A matching active inventory alert independently confirms the condition."
+      ],
+      "conditionActive": true
+    },
+    "createdAt": "2026-09-30T17:51:41.971Z",
+    "updatedAt": "2026-09-30T18:00:34.815Z",
+    "id": "rec_0ca1df92-1b19-4a8d-bb17-53595140abf5"
+  },
+  {
+    "dedupeKey": "EXPIRY_RISK:bu_011",
+    "source": "DETERMINISTIC_ENGINE",
+    "type": "EXPIRY_RISK",
+    "priority": "LOW",
+    "title": "Review expired B- PRBC unit",
+    "message": "Unit BLD-2026-1011 is expired (recorded expiry: 2026-09-21) and remains in inventory with status EXPIRED.",
+    "reason": "The unit is marked EXPIRED and still requires the established quarantine/disposal workflow.",
+    "suggestedAction": "Verify physical segregation and complete the existing expiry/discard transaction workflow; this recommendation does not change inventory status.",
+    "bloodGroup": "B-",
+    "component": "PRBC",
+    "referenceType": "UNIT",
+    "referenceId": "bu_011",
+    "status": "ACTIVE",
+    "confidence": "HIGH",
+    "metadata": {
+      "unitCode": "BLD-2026-1011",
+      "expiryDate": "2026-09-21",
+      "inventoryStatus": "EXPIRED",
+      "priorityBasis": [],
+      "conditionActive": true
+    },
+    "createdAt": "2026-09-30T17:51:41.971Z",
+    "updatedAt": "2026-09-30T18:00:34.815Z",
+    "id": "rec_a29d4601-ba44-42f6-8c9e-627b6118e995"
+  },
+  {
+    "dedupeKey": "PRIORITIZE_EXPIRING:O-|PRBC",
+    "source": "DETERMINISTIC_ENGINE",
+    "type": "PRIORITIZE_EXPIRING",
+    "priority": "LOW",
+    "title": "Prioritize 1 O- PRBC unit(s) nearing expiry",
+    "message": "1 available unit(s) expire within 7 days; the nearest expires 2026-10-06 (6 day(s)).",
+    "reason": "Recorded expiry dates place these available units inside the configured notice window.",
+    "suggestedAction": "Review FIFO allocation and issue these units first when clinically appropriate through the normal transaction workflow.",
+    "bloodGroup": "O-",
+    "component": "PRBC",
+    "referenceType": "UNIT_GROUP",
+    "referenceId": "bu_002",
+    "status": "ACTIVE",
+    "confidence": "HIGH",
+    "metadata": {
+      "affectedUnitIds": [
+        "bu_002"
+      ],
+      "nearestExpiryDate": "2026-10-06",
+      "daysRemaining": 6,
+      "expiryNoticeDays": 7,
+      "priorityBasis": [
+        "An affected unit is inside the configured expiry window.",
+        "A matching active inventory alert independently confirms the condition."
+      ],
+      "conditionActive": true
+    },
+    "createdAt": "2026-09-30T17:51:41.971Z",
+    "updatedAt": "2026-09-30T18:00:34.815Z",
+    "id": "rec_25625656-66e4-4fdb-857e-535e693f1ac9"
+  },
+  {
+    "dedupeKey": "PRIORITIZE_EXPIRING:O-|WHOLE_BLOOD",
+    "source": "DETERMINISTIC_ENGINE",
+    "type": "PRIORITIZE_EXPIRING",
+    "priority": "MEDIUM",
+    "title": "Prioritize 1 O- WHOLE_BLOOD unit(s) nearing expiry",
+    "message": "1 available unit(s) expire within 7 days; the nearest expires 2026-10-02 (2 day(s)).",
+    "reason": "Recorded expiry dates place these available units inside the configured notice window.",
+    "suggestedAction": "Review FIFO allocation and issue these units first when clinically appropriate through the normal transaction workflow.",
+    "bloodGroup": "O-",
+    "component": "WHOLE_BLOOD",
+    "referenceType": "UNIT_GROUP",
+    "referenceId": "bu_003",
+    "status": "ACTIVE",
+    "confidence": "HIGH",
+    "metadata": {
+      "affectedUnitIds": [
+        "bu_003"
+      ],
+      "nearestExpiryDate": "2026-10-02",
+      "daysRemaining": 2,
+      "expiryNoticeDays": 7,
+      "priorityBasis": [
+        "An affected unit expires within 3 days.",
+        "A matching active inventory alert independently confirms the condition."
+      ],
+      "conditionActive": true
+    },
+    "createdAt": "2026-09-30T17:51:41.971Z",
+    "updatedAt": "2026-09-30T18:00:34.815Z",
+    "id": "rec_3a896807-55cc-436c-9de2-bc0d46aa9078"
+  },
+  {
+    "dedupeKey": "PRIORITIZE_EXPIRING:B+|PLATELETS",
+    "source": "DETERMINISTIC_ENGINE",
+    "type": "PRIORITIZE_EXPIRING",
+    "priority": "MEDIUM",
+    "title": "Prioritize 1 B+ PLATELETS unit(s) nearing expiry",
+    "message": "1 available unit(s) expire within 7 days; the nearest expires 2026-10-03 (3 day(s)).",
+    "reason": "Recorded expiry dates place these available units inside the configured notice window.",
+    "suggestedAction": "Review FIFO allocation and issue these units first when clinically appropriate through the normal transaction workflow.",
+    "bloodGroup": "B+",
+    "component": "PLATELETS",
+    "referenceType": "UNIT_GROUP",
+    "referenceId": "bu_006",
+    "status": "ACTIVE",
+    "confidence": "HIGH",
+    "metadata": {
+      "affectedUnitIds": [
+        "bu_006"
+      ],
+      "nearestExpiryDate": "2026-10-03",
+      "daysRemaining": 3,
+      "expiryNoticeDays": 7,
+      "priorityBasis": [
+        "An affected unit expires within 3 days.",
+        "A matching active inventory alert independently confirms the condition."
+      ],
+      "conditionActive": true
+    },
+    "createdAt": "2026-09-30T17:51:41.971Z",
+    "updatedAt": "2026-09-30T18:00:34.815Z",
+    "id": "rec_df676c55-887f-451d-a9b1-81e83800a92a"
+  }
+]

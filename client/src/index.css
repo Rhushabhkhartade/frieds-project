@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-800 font-sans min-h-screen;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+}
+
+@layer components {
+  /* Medical Card Primitive */
+  .medical-card {
+    @apply bg-white border border-slate-200/90 rounded-xl shadow-medical transition-all duration-200;
+  }
+  
+  .medical-card-hover {
+    @apply medical-card hover:shadow-medical-md hover:border-slate-300;
+  }
+
+  /* Status Badges */
+  .badge-optimal {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-50 text-emerald-700 border border-emerald-200/80;
+  }
+
+  .badge-warning {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber-50 text-amber-700 border border-amber-200/80;
+  }
+
+  .badge-critical {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-50 text-red-700 border border-red-200/80;
+  }
+
+  .badge-expiry {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-50 text-indigo-700 border border-indigo-200/80;
+  }
+
+  .badge-neutral {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 text-slate-700 border border-slate-200;
+  }
+
+  /* Form Controls */
+  .medical-input {
+    @apply block w-full rounded-lg border border-slate-300 bg-white px-3.5 py-2 text-sm text-slate-800 placeholder-slate-400 transition-colors focus:border-blood-600 focus:outline-none focus:ring-2 focus:ring-blood-600/20 disabled:bg-slate-50 disabled:text-slate-400;
+  }
+
+  .medical-select {
+    @apply block w-full rounded-lg border border-slate-300 bg-white px-3.5 py-2 text-sm text-slate-800 transition-colors focus:border-blood-600 focus:outline-none focus:ring-2 focus:ring-blood-600/20 disabled:bg-slate-50;
+  }
+}
+
+/* Custom Scrollbar for clean desktop medical UI */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

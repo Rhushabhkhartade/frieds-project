@@ -1,0 +1,82 @@
+[
+  {
+    "code": "A+",
+    "name": "A Positive",
+    "canDonateTo": ["A+", "AB+"],
+    "canReceiveFrom": ["A+", "A-", "O+", "O-"],
+    "criticalThreshold": 8,
+    "lowThreshold": 20,
+    "idealStock": 50,
+    "notes": "Common recipient in elective surgical units"
+  },
+  {
+    "code": "A-",
+    "name": "A Negative",
+    "canDonateTo": ["A+", "A-", "AB+", "AB-"],
+    "canReceiveFrom": ["A-", "O-"],
+    "criticalThreshold": 4,
+    "lowThreshold": 10,
+    "idealStock": 25,
+    "notes": "Rare group, prioritized for A- negative mothers and surgery"
+  },
+  {
+    "code": "B+",
+    "name": "B Positive",
+    "canDonateTo": ["B+", "AB+"],
+    "canReceiveFrom": ["B+", "B-", "O+", "O-"],
+    "criticalThreshold": 8,
+    "lowThreshold": 20,
+    "idealStock": 50,
+    "notes": "Moderate-to-high hospital demand"
+  },
+  {
+    "code": "B-",
+    "name": "B Negative",
+    "canDonateTo": ["B+", "B-", "AB+", "AB-"],
+    "canReceiveFrom": ["B-", "O-"],
+    "criticalThreshold": 4,
+    "lowThreshold": 10,
+    "idealStock": 25,
+    "notes": "High emergency priority group"
+  },
+  {
+    "code": "AB+",
+    "name": "AB Positive",
+    "canDonateTo": ["AB+"],
+    "canReceiveFrom": ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"],
+    "criticalThreshold": 4,
+    "lowThreshold": 10,
+    "idealStock": 25,
+    "notes": "Universal red blood cell recipient"
+  },
+  {
+    "code": "AB-",
+    "name": "AB Negative",
+    "canDonateTo": ["AB+", "AB-"],
+    "canReceiveFrom": ["AB-", "A-", "B-", "O-"],
+    "criticalThreshold": 2,
+    "lowThreshold": 6,
+    "idealStock": 15,
+    "notes": "Rarest blood group; universal donor for fresh frozen plasma"
+  },
+  {
+    "code": "O+",
+    "name": "O Positive",
+    "canDonateTo": ["O+", "A+", "B+", "AB+"],
+    "canReceiveFrom": ["O+", "O-"],
+    "criticalThreshold": 10,
+    "lowThreshold": 25,
+    "idealStock": 60,
+    "notes": "Highest volume transfused in emergency trauma"
+  },
+  {
+    "code": "O-",
+    "name": "O Negative",
+    "canDonateTo": ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"],
+    "canReceiveFrom": ["O-"],
+    "criticalThreshold": 5,
+    "lowThreshold": 12,
+    "idealStock": 30,
+    "notes": "Universal red cell donor, emergency trauma gold standard"
+  }
+]

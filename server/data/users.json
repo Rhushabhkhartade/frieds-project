@@ -1,0 +1,61 @@
+[{
+        "id": "usr_admin_01",
+        "fullName": "Dr. Sarah Jenkins",
+        "name": "Dr. Sarah Jenkins",
+        "email": "admin@bloodai.local",
+        "passwordHash": "$2b$10$HKme3gymLvQxDy/4h7BYU.379HYFGtxzUkP794Q6W..AZKdJcDJY2",
+        "role": "ADMIN",
+        "facility": "Regional Transfusion Center - Central Hub",
+        "status": "ACTIVE",
+        "createdAt": "2026-09-01T08:00:00.000Z",
+        "updatedAt": "2026-09-01T08:00:00.000Z"
+    },
+    {
+        "id": "usr_staff_02",
+        "fullName": "Alex Rivera",
+        "name": "Alex Rivera",
+        "email": "staff@bloodai.local",
+        "passwordHash": "$2b$10$e8tQo9RKeD1yL9aeO26DTed85nAw3K6UipEXiUfoDbIO/R4CHr0SC",
+        "role": "STAFF",
+        "facility": "Laboratory & Inventory Division",
+        "status": "ACTIVE",
+        "createdAt": "2026-09-05T08:00:00.000Z",
+        "updatedAt": "2026-09-05T08:00:00.000Z"
+    },
+    {
+        "id": "usr_1790787131607_hg32",
+        "fullName": "Dr. Emily Stone",
+        "name": "Dr. Emily Stone",
+        "email": "emily.stone@hospital.org",
+        "passwordHash": "$2b$10$7hPJWSI/H7wOHjIBlpTjwev/fBG5gVa9qcHa7UDNkJS4zcOwX1c3i",
+        "role": "STAFF",
+        "facility": "St. Jude Transfusion Lab",
+        "status": "ACTIVE",
+        "createdAt": "2026-09-30T16:52:11.607Z",
+        "updatedAt": "2026-09-30T16:52:11.607Z"
+    },
+    {
+        "id": "usr_1790787261190_6xrx",
+        "fullName": "Dr. Emily Stone",
+        "name": "Dr. Emily Stone",
+        "email": "emily.stone_1790787260990@hospital.org",
+        "passwordHash": "$2b$10$oj.7BKmZWivAse44uz3NT.WLR/Lgeni2rTiDPtDfolOaO4vw/I11G",
+        "role": "STAFF",
+        "facility": "St. Jude Transfusion Lab",
+        "status": "ACTIVE",
+        "createdAt": "2026-09-30T16:54:21.190Z",
+        "updatedAt": "2026-09-30T16:54:21.190Z"
+    },
+    {
+        "id": "usr_1790787553683_xl2x",
+        "fullName": "Dr. Emily Stone",
+        "name": "Dr. Emily Stone",
+        "email": "emily.stone_1790787553480@hospital.org",
+        "passwordHash": "$2b$10$mdjhtwitcVGCJKpA8PMCAOvCRVIXvpDUgmc1vgv6blObGVEhk/dvK",
+        "role": "STAFF",
+        "facility": "St. Jude Transfusion Lab",
+        "status": "ACTIVE",
+        "createdAt": "2026-09-30T16:59:13.683Z",
+        "updatedAt": "2026-09-30T16:59:13.683Z"
+    }
+]

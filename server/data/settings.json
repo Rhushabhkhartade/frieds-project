@@ -1,0 +1,51 @@
+{
+  "bloodBankName": "Regional Transfusion Center - Central Hub",
+  "hospitalAffiliation": "Metropolitan Health Authority",
+  "facilityCode": "RTC-MHA-01",
+  "expiryNoticeDays": 7,
+  "enableSoundAlerts": true,
+  "forecastingHorizonDefaultDays": 7,
+  "thresholds": {
+    "A+": {
+      "critical": 8,
+      "low": 20,
+      "ideal": 50
+    },
+    "A-": {
+      "critical": 4,
+      "low": 10,
+      "ideal": 25
+    },
+    "B+": {
+      "critical": 8,
+      "low": 20,
+      "ideal": 50
+    },
+    "B-": {
+      "critical": 4,
+      "low": 10,
+      "ideal": 25
+    },
+    "AB+": {
+      "critical": 4,
+      "low": 10,
+      "ideal": 25
+    },
+    "AB-": {
+      "critical": 2,
+      "low": 6,
+      "ideal": 15
+    },
+    "O+": {
+      "critical": 10,
+      "low": 25,
+      "ideal": 60
+    },
+    "O-": {
+      "critical": 5,
+      "low": 12,
+      "ideal": 30
+    }
+  },
+  "updatedAt": "2026-09-30T17:23:38.819Z"
+}
